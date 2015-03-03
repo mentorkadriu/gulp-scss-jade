@@ -13,5 +13,8 @@
     "gulp-jade": "^1.0.0",
     "gulp-plumber": "^0.6.6",
     "imagemin-pngquant": "^4.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
