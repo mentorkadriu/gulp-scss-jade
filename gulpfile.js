@@ -41,6 +41,21 @@ gulp.task('compass-min', function() {
         .pipe(gulp.dest('production/css'));
 });
 
+
+// Gulp default task for fonts
+
+gulp.task('fonts', function(){
+  return gulp.src('assets/fonts/**/*')
+    .pipe( gulp.dest('dist/fonts/'));
+});
+
+// Gulp production task for javascript 
+
+gulp.task('fonts-min', function(){
+  return gulp.src('assets/fonts/**/*')
+    .pipe( gulp.dest('production/fonts/'));
+});
+
 // Gulp default task for javascript
 
 gulp.task('js', function() {
@@ -106,6 +121,8 @@ gulp.task('default',['compass','js','templates', 'images', 'browser-sync'], func
   
   gulp.watch('assets/scss/*.scss',['compass', reload]);
 
+  gulp.watch('assets/fonts/**/*',['fonts', reload]);
+
   gulp.watch('assets/scripts/*.js',['js', reload]);
 
   gulp.watch('assets/images/**/*',['images', reload]);
@@ -117,6 +134,6 @@ gulp.task('default',['compass','js','templates', 'images', 'browser-sync'], func
 
 // Gulp production task
 
-gulp.task('production',['compass-min','js-min','templates-prod', 'images-min'], function () {
+gulp.task('production',['compass-min','fonts-min','js-min','templates-prod', 'images-min'], function () {
   
 });
