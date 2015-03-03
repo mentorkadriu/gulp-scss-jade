@@ -12,4 +12,5 @@
     "gulp-jade": "^1.0.0",
     "gulp-plumber": "^0.6.6"
   },
+  "node": "0.10.x"
 }
