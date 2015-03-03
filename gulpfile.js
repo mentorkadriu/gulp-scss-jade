@@ -5,10 +5,7 @@ var gulp = require('gulp'),
     reload      = browserSync.reload,
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
     jade = require('gulp-jade');
-    // sass = require('gulp-sass');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -92,11 +89,6 @@ gulp.task('images', function() {
 
 gulp.task('images-min', function() {
   return gulp.src('./assets/images/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
-    }))
     .pipe(gulp.dest('./production/images'))
 })
 
