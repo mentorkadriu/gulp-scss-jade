@@ -1,7 +1,16 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mentorkadriu/gulp-scss-jade"
+  },
   "devDependencies": {
+    "browser-sync": "^2.2.1",
     "gulp": "^3.8.11",
     "gulp-compass": "^2.0.3",
-    "gulp-plumber": "^0.6.6"
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-plumber": "^0.6.6",
+    "imagemin-pngquant": "^4.0.0"
   }
 }

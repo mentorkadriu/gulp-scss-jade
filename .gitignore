@@ -13,7 +13,7 @@ npm-debug.log
 *.psd
 
 
-# Ignore directory
+# Ignore directories
 
 
 .sass-cache/*
@@ -21,6 +21,11 @@ npm-debug.log
 bower_components/
 
 node_modules/
+
+
+dist/
+
+production/
 
 
 
