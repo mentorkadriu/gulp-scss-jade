@@ -1,0 +1,24 @@
+{
+  "name": "gulp-scss-jade",
+  "version": "0.0.1",
+  "authors": [
+    "Mentor Kadriu <mentor.kadriu@gmail.com>"
+  ],
+  "description": "Build and deploy psd desgins to html/css/js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "gulpfile",
+    "scss",
+    "jade",
+    "css3",
+    "html5",
+    "js",
+    "psd",
+    "to",
+    "html"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.mentorkadriu.com"
+}
