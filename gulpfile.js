@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
     concat = require('gulp-concat'),
+    autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jade = require('gulp-jade');
@@ -20,6 +21,10 @@ gulp.task('browser-sync', function() {
 gulp.task('compass', function() {
     return gulp.src('./assets/scss/*.scss')
         .pipe(plumber())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(compass({
             css: 'dist/stylesheets',
             sass: 'assets/scss',
@@ -32,6 +37,10 @@ gulp.task('compass', function() {
 gulp.task('compass-min', function() {
     return gulp.src('./assets/scss/*.scss')
         .pipe(plumber())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(compass({
             css: 'production/css',
             sass: 'assets/scss',
