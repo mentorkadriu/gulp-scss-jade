@@ -1,8 +1,10 @@
 
-h1 {
-	color: red;
-}
-
-h1 {
-	font-size: 50px;
+#wrapper {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	&-inner {
+		margin-top: 50px;
+	}
 }
