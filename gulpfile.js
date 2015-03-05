@@ -1,10 +1,9 @@
 var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
-    concat = require('gulp-concat'),
-    autoprefixer = require('gulp-autoprefixer'),
+    plumber = require('gulp-plumber'),
+    sass = require('gulp-sass'),
     jade = require('gulp-jade');
 
 gulp.task('browser-sync', function() {
@@ -54,7 +53,7 @@ gulp.task('js', function() {
 
 gulp.task('images', function() {
   return gulp.src('assets/images/**/*')
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/images/'));
 })
 
 
@@ -70,9 +69,10 @@ gulp.task('templates', function() {
 });
 
 
+
 // Gulp default task
 
-gulp.task('default',['scss','fonts','js','templates', 'images', 'browser-sync'], function () {
+gulp.task('default',['browser-sync', 'scss','fonts','js','templates', 'images'], function () {
   
   gulp.watch('assets/scss/*.scss',['scss', reload]);
 
